@@ -1,0 +1,18 @@
+[JSON]
+
+precision=len((ar[2]).split('.')[1])+1
+
+json={"_id":int(ar[40]),
+  "sExtdId": (ar[39]).strip(),
+  "Dis":float(ar[4]),
+  "loc":{'type' : "Point" , 'coordinates' : [float(Decimal(ar[2]) -180) ,float(ar[3])]},
+  "Mu" : [float(ar[5]),float(ar[6])],
+  "RV": float(ar[7]),
+  "Alb":[float(ar[8]),float(ar[13])],
+  "oP" : [ float(ar[10]),float(ar[16]), float(ar[18]), float(ar[24]), float(ar[25]),float(ar[26]),float(ar[27]), float(ar[38])],
+  "sP1" :[float(ar[0]),int(ar[15]), float(ar[19]),int(ar[35]), float(ar[1]), float(ar[11]),float(ar[12]),str2bool(ar[14])],
+  "GMags" : [ float(ar[30]) , float(ar[31]), float(ar[32]), float(ar[33])],
+  "sP2" : [ float(ar[17]), float(ar[42]), float(ar[47]),ar[41],float(ar[37])],
+  "Mags" : [ float(ar[9]),float(ar[20]), float(ar[21]),float(ar[28]),float(ar[29]), float(ar[34])],   
+  "vP": [float(ar[36]), float(ar[43]) ,float(ar[44]), float(ar[45]),ar[46]],
+  "nc" :int(ar[22])}
